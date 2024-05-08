@@ -1,0 +1,65 @@
+body {
+    background-color: #333; /* Dark background */
+    background-image: linear-gradient(to bottom right, #333, #666); /* Gradient */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .container {
+    position: relative;
+    width: 310px;
+    height: 200px;
+    margin: 50px auto;
+    overflow: hidden; /* Added to hide overflowing cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border-radius: 15px; /* Rounded corners */
+  }
+  
+  .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222; /* Dark background for cards */
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.5s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Card shadow effect */
+  }
+  
+  .card:not(.active) {
+    z-index: -1;
+    transform: translateY(100%);
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    color: #26ff00; /* Text color */
+  }
+  
+  .card p {
+    margin-bottom: 0;
+    color: #ffffff; /* Text color */
+    width: 300px;
+  }
+  
+  .arrow {
+    position: absolute;
+    bottom: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .left {
+    left: 20px;
+  }
+  
+  .right {
+    right: 20px;
+  }
+  
